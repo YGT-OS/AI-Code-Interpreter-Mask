@@ -7,10 +7,10 @@ import org.tangbean.aicodeinterpretermask.mask.model.MaskResult;
 
 import java.util.Objects;
 
-public class RubyMaskListener extends RubyBaseListener {
+public class RubyParseTreeListener extends RubyBaseListener {
     private final MaskResult maskResult;
 
-    public RubyMaskListener(MaskResult maskResult) {
+    public RubyParseTreeListener(MaskResult maskResult) {
         this.maskResult = maskResult;
     }
 

@@ -1,6 +1,10 @@
 package org.tangbean.aicodeinterpretermask;
 
-import org.tangbean.aicodeinterpretermask.compiler.ruby.RubyCompiled;
+import org.tangbean.aicodeinterpretermask.common.lang.Lang;
+import org.tangbean.aicodeinterpretermask.mask.masker.AntlrCodeMasker;
+import org.tangbean.aicodeinterpretermask.mask.masker.CodeMasker;
+import org.tangbean.aicodeinterpretermask.mask.model.MaskResult;
+import org.tangbean.aicodeinterpretermask.mask.utils.NumericMaskNameGenerator;
 
 public class Main {
 
@@ -13,7 +17,14 @@ public class Main {
                 "\n" +
                 "        end_of_config\n" +
                 "      end";
-        RubyCompiled compiled = RubyCompiled.compile(source);
+
+        CodeMasker codeMasker = new AntlrCodeMasker();
+        MaskResult maskResult = codeMasker.mask(source, Lang.Ruby, new NumericMaskNameGenerator());
+
+        System.out.println(maskResult.getSourceCode());
+        System.out.println(maskResult.getMaskedCode());
+        System.out.println(maskResult.getCodeBook());
+        System.out.println(maskResult.getMaskBook());
         System.out.println("==================== Main End   ====================\n");
     }
 }

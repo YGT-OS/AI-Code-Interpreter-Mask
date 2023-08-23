@@ -39,10 +39,20 @@ public class MaskResult {
         maskBook = new HashMap<>();
     }
 
-    public void putCode(String tokenType, String tokenValue, int start, int end) {
+    public void putCode(String tokenType, String tokenValue, int start, int end, String prefix, String suffix) {
         String maskName = this.maskNameGenerator.getMaskName(tokenType, tokenValue);
+        if (prefix != null) {
+            maskName = prefix + maskName;
+        }
+        if (suffix != null) {
+            maskName = maskName + suffix;
+        }
         codeBook.put(maskName, tokenValue);
         maskBook.put(start, new Pair<>(end, maskName));
+    }
+
+    public void putCode(String tokenType, String tokenValue, int start, int end) {
+        putCode(tokenType, tokenValue, start, end, null, null);
     }
 
     public void buildMaskedCode() {
