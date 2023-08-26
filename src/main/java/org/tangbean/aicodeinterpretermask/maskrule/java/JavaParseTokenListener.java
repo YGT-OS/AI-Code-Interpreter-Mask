@@ -1,11 +1,11 @@
-package org.tangbean.aicodeinterpretermask.compiler.ruby;
+package org.tangbean.aicodeinterpretermask.maskrule.java;
 
 import org.tangbean.aicodeinterpretermask.common.token.ParseTokenListener;
 import org.tangbean.aicodeinterpretermask.mask.model.MaskResult;
 
-public class RubyParseTokenListener extends ParseTokenListener {
+public class JavaParseTokenListener extends ParseTokenListener {
 
-    public RubyParseTokenListener(MaskResult maskResult) {
+    public JavaParseTokenListener(MaskResult maskResult) {
         super(maskResult);
         handle_ML_COMMENT();
         handle_SL_COMMENT();

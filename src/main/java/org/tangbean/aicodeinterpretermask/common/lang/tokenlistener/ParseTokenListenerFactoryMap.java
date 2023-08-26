@@ -1,6 +1,7 @@
 package org.tangbean.aicodeinterpretermask.common.lang.tokenlistener;
 
 import org.tangbean.aicodeinterpretermask.common.lang.Lang;
+import org.tangbean.aicodeinterpretermask.common.lang.tokenlistener.factory.JavaParseTokenListenerFactory;
 import org.tangbean.aicodeinterpretermask.common.lang.tokenlistener.factory.RubyParseTokenListenerFactory;
 
 import java.util.HashMap;
@@ -10,6 +11,7 @@ public class ParseTokenListenerFactoryMap {
     private static final Map<Lang, IParseTokenListenerFactory> factoriesMap = new HashMap<>();
     static {
         factoriesMap.put(Lang.Ruby, new RubyParseTokenListenerFactory());
+        factoriesMap.put(Lang.Java, new JavaParseTokenListenerFactory());
     }
 
     public static IParseTokenListenerFactory getParseTokenListenerFactory(Lang language) {

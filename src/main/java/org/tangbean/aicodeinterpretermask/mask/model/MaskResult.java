@@ -1,5 +1,7 @@
 package org.tangbean.aicodeinterpretermask.mask.model;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import lombok.Getter;
 import org.antlr.v4.runtime.misc.Pair;
 import org.tangbean.aicodeinterpretermask.mask.utils.MaskNameGenerator;
@@ -30,13 +32,16 @@ public class MaskResult {
      */
     private final Map<Integer, Pair<Integer, String>> maskBook;
 
+    private final Gson gson;
+
     private final MaskNameGenerator maskNameGenerator;
 
     public MaskResult(String sourceCode, MaskNameGenerator maskNameGenerator) {
         this.sourceCode = sourceCode;
         this.maskNameGenerator = maskNameGenerator;
-        codeBook = new HashMap<>();
-        maskBook = new HashMap<>();
+        this.codeBook = new HashMap<>();
+        this.maskBook = new HashMap<>();
+        this.gson = new GsonBuilder().setPrettyPrinting().create();
     }
 
     public void putCode(String tokenType, String tokenValue, int start, int end, String prefix, String suffix) {
@@ -68,5 +73,13 @@ public class MaskResult {
             }
         }
         this.maskedCode = res.toString();
+    }
+
+    public String getPrettyCodeBook() {
+        return gson.toJson(codeBook);
+    }
+
+    public String getPrettyMaskBook() {
+        return gson.toJson(maskBook);
     }
 }
