@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import lombok.Getter;
 import org.antlr.v4.runtime.misc.Pair;
-import org.tangbean.aicodeinterpretermask.mask.utils.MaskNameGenerator;
+import org.tangbean.aicodeinterpretermask.common.maskname.MaskNameGenerator;
 
 import java.util.HashMap;
 import java.util.Map;

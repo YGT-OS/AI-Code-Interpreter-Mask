@@ -5,16 +5,16 @@ import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
-import org.tangbean.aicodeinterpretermask.common.lang.Lang;
-import org.tangbean.aicodeinterpretermask.common.lang.convert.LangConverter;
-import org.tangbean.aicodeinterpretermask.common.lang.lexer.LexerBuilder;
-import org.tangbean.aicodeinterpretermask.common.lang.tokenlistener.ParseTokenListenerBuilder;
-import org.tangbean.aicodeinterpretermask.common.lang.tree.ParseTreeBuilder;
-import org.tangbean.aicodeinterpretermask.common.lang.treelistener.ParseTreeListenerBuilder;
+import org.tangbean.aicodeinterpretermask.lang.Lang;
+import org.tangbean.aicodeinterpretermask.lang.convert.LangConverter;
+import org.tangbean.aicodeinterpretermask.lang.lexer.LexerBuilder;
+import org.tangbean.aicodeinterpretermask.lang.tokenlistener.ParseTokenListenerBuilder;
+import org.tangbean.aicodeinterpretermask.lang.tree.ParseTreeBuilder;
+import org.tangbean.aicodeinterpretermask.lang.treelistener.ParseTreeListenerBuilder;
 import org.tangbean.aicodeinterpretermask.common.token.ParseTokenListener;
 import org.tangbean.aicodeinterpretermask.common.token.ParseTokenWalker;
 import org.tangbean.aicodeinterpretermask.mask.model.MaskResult;
-import org.tangbean.aicodeinterpretermask.mask.utils.MaskNameGenerator;
+import org.tangbean.aicodeinterpretermask.common.maskname.MaskNameGenerator;
 
 public class AntlrCodeMasker implements CodeMasker {
 

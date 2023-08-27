@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.tangbean.aicodeinterpretermask.mask.masker.AntlrCodeMasker;
 import org.tangbean.aicodeinterpretermask.mask.masker.CodeMasker;
 import org.tangbean.aicodeinterpretermask.mask.model.MaskResult;
-import org.tangbean.aicodeinterpretermask.mask.utils.NumericMaskNameGenerator;
+import org.tangbean.aicodeinterpretermask.common.maskname.NumericMaskNameGenerator;
 import org.tangbean.aicodeinterpretermask.utils.TestPrintUtils;
 
 public class JavaMaskTest {

@@ -1,7 +1,7 @@
 package org.tangbean.aicodeinterpretermask.mask;
 
 import org.junit.jupiter.api.Test;
-import org.tangbean.aicodeinterpretermask.mask.utils.NumericMaskNameGenerator;
+import org.tangbean.aicodeinterpretermask.common.maskname.NumericMaskNameGenerator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
